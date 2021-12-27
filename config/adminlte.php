@@ -242,9 +242,9 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
+            'text' => 'kategori',
+            'url' => 'admin/kategori',
+            'icon' => 'far fa-fw fa-file',
         ],
         [
             'text' => 'buku',
@@ -257,8 +257,18 @@ return [
             'icon' => 'far fa-fw fa-file',
         ],
         [
-            'text' => 'menu lainnya',
-            'url' => '#',
+            'text' => 'penerbit',
+            'url' => 'admin/penerbit',
+            'icon' => 'far fa-fw fa-file',
+        ],
+        [
+            'text' => 'pembeli',
+            'url' => 'admin/pembeli',
+            'icon' => 'far fa-fw fa-file',
+        ],
+        [
+            'text' => 'transaksi',
+            'url' => 'admin/transaksi',
             'icon' => 'far fa-fw fa-file',
         ],
     ],
