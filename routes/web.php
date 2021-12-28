@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,4 +76,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('pengarang', function () {
         return view('pengarang.index');
     })->middleware(['role:admin']);;
+
+    Route::resource('kategori', KategoriController::class)->middleware(['role:admin']);
+
 });
