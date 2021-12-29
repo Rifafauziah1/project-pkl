@@ -61,7 +61,7 @@ class KategoriController extends Controller
     {
         //
         $kategori = Kategori::findOrFail($id);
-        return view('admin.kategori.show', compact('kategori'));
+        return view('kategori.show', compact('kategori'));
     }
 
     /**
@@ -74,7 +74,7 @@ class KategoriController extends Controller
     {
         //
         $kategori = Kategori::findOrFail($id);
-        return view('admin.kategori.edit', compact('kategori'));
+        return view('kategori.edit', compact('kategori'));
     }
 
     /**

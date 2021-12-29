@@ -247,11 +247,6 @@ return [
             'icon' => 'far fa-fw fa-file',
         ],
         [
-            'text' => 'buku',
-            'url' => 'admin/buku',
-            'icon' => 'far fa-fw fa-file',
-        ],
-        [
             'text' => 'pengarang',
             'url' => 'admin/pengarang',
             'icon' => 'far fa-fw fa-file',
@@ -259,6 +254,11 @@ return [
         [
             'text' => 'penerbit',
             'url' => 'admin/penerbit',
+            'icon' => 'far fa-fw fa-file',
+        ],
+        [
+            'text' => 'buku',
+            'url' => 'admin/buku',
             'icon' => 'far fa-fw fa-file',
         ],
         [
