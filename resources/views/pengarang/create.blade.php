@@ -21,6 +21,15 @@
                    <form action="{{route('pengarang.store')}}" method="post">
                         @csrf
                         <div class="form-group">
+                            <label for="">Masukan ID</label>
+                            <input type="number" name="id_pengarang" class="form-control @error('id_pengarang') is-invalid @enderror">
+                             @error('id_pengarang')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <label for="">Masukan Nama Pengarang</label>
                             <input type="text" name="nama_pengarang" class="form-control @error('nama_pengarang') is-invalid @enderror">
                              @error('nama_pengarang')

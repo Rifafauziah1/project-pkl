@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-12">
-                <h1 class="m-0">Edit Data pengarang</h1>
+                <h1 class="m-0">Edit Data penerbit</h1>
             </div>
         </div>
     </div>
@@ -16,30 +16,30 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Data pengarang</div>
+                <div class="card-header">Data penerbit</div>
                     <div class="card-body">
-                        <form action="{{route('pengarang.update',$pengarang->id)}}" method="post">
+                        <form action="{{route('penerbit.update',$penerbit->id)}}" method="post">
                             @csrf
                             @method('put')
                             <div class="form-group">
                                 <label for="">Masukan ID</label>
-                                <input type="number" name="id_pengarang" value="{{$pengarang->id_pengarang}}" class="form-control @error('nama_kategori') is-invalid @enderror">
-                                @error('id_pengarang')
+                                <input type="number" name="id_penerbit" value="{{$pengarang->id_penerbit}}" class="form-control @error('nama_kategori') is-invalid @enderror">
+                                @error('id_penerbit')
                                     <span class="invalid-feedback" role="alert"></span>
                                     <strong>{{ $message }}</strong>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="">Masukan Nama Pengarang</label>
-                                <input type="text" name="nama_pengarang" value="{{$pengarang->nama_pengarang}}" class="form-control @error('nama_kategori') is-invalid @enderror">
-                                @error('nama_pengarang')
+                                <label for="">Masukan Nama Penerbit</label>
+                                <input type="text" name="nama_penerbit" value="{{$penerbit->nama_penerbit}}" class="form-control @error('nama_kategori') is-invalid @enderror">
+                                @error('nama_penerbit')
                                     <span class="invalid-feedback" role="alert"></span>
                                     <strong>{{ $message }}</strong>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="">Masukan Alamat</label>
-                                <input type="text" name="alamat" value="{{$pengarang->alamat}}" class="form-control @error('nama_kategori') is-invalid @enderror">
+                                <input type="text" name="alamat" value="{{$penerbit->alamat}}" class="form-control @error('nama_kategori') is-invalid @enderror">
                                 @error('alamat')
                                     <span class="invalid-feedback" role="alert"></span>
                                     <strong>{{ $message }}</strong>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Masukan Email</label>
-                                <input type="text" name="email" value="{{$pengarang->email}}" class="form-control @error('nama_kategori') is-invalid @enderror">
+                                <input type="text" name="email" value="{{$penerbit->email}}" class="form-control @error('nama_kategori') is-invalid @enderror">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert"></span>
                                     <strong>{{ $message }}</strong>

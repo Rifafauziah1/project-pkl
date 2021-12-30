@@ -15,6 +15,7 @@ class CreateBukuTable extends Migration
     {
         Schema::create('buku', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_buku');
             $table->bigInteger('id_kategori')->unsigned();
             $table->bigInteger('id_pengarang')->unsigned();
             $table->bigInteger('id_penerbit')->unsigned();

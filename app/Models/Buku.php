@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Buku extends Model
 {
     use HasFactory;
+    protected $table = "buku";
     protected $fillable = ['id_kategori', 'id_pengarang', 'id_penerbit' . 'judul', 'nama_kategori', 'nama_pengarang', 'nama_penerbit', 'deskripsi', 'stok', 'harga', 'cover'];
     protected $visible = ['id_kategori', 'id_pengarang', 'id_penerbit' . 'judul', 'nama_kategori', 'nama_pengarang', 'nama_penerbit', 'deskripsi', 'stok', 'harga', 'cover'];
     public $timestamps = true;

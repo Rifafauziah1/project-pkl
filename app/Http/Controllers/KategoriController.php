@@ -40,11 +40,13 @@ class KategoriController extends Controller
     {
         //validasi data
         $validated = $request->validate([
+            'id_kategori' => 'required',
             'kode_kategori' => 'required',
             'nama_kategori' => 'required',
         ]);
 
         $kategori = new Kategori;
+        $kategori->id_kategori = $request->id_kategori;
         $kategori->kode_kategori = $request->kode_kategori;
         $kategori->nama_kategori = $request->nama_kategori;
         $kategori->save();

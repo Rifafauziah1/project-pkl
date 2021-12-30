@@ -15,6 +15,7 @@ class CreatePengarangTable extends Migration
     {
         Schema::create('pengarang', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_pengarang');
             $table->string('nama_pengarang');
             $table->string('alamat');
             $table->string('email');

@@ -25,7 +25,7 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr>
-                                    <th>Nomor</th>
+                                    <th>ID</th>
                                     <th>Kode Kategori</th>
                                     <th>Nama Kategori</th>
                                     <th>Aksi</th>
@@ -33,7 +33,7 @@
                                 @php $no=1; @endphp
                                 @foreach ($kategori as $data)
                                     <tr>
-                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $data->id_kategori }}</td>
                                         <td>{{ $data->kode_kategori }}</td>
                                         <td>{{ $data->nama_kategori }}</td>
                                         <td>

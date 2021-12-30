@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PengarangController;
+use App\Http\Controllers\PenerbitController;
+use App\Http\Controllers\BukuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,9 +72,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //});
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::get('buku', function () {
-        return view('buku.index');
-    })->middleware(['role:admin|pengguna']);
+    // Route::get('buku', function () {
+    //     return view('buku.index');
+    // })->middleware(['role:admin|pengguna']);
 
     // Route::get('pengarang', function () {
     //     return view('pengarang.index');
@@ -80,5 +82,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     Route::resource('kategori', KategoriController::class)->middleware(['role:admin']);
     Route::resource('pengarang', PengarangController::class)->middleware(['role:admin']);
+    Route::resource('penerbit', PenerbitController::class)->middleware(['role:admin']);
+    Route::resource('buku', BukuController::class)->middleware(['role:admin']);
 
 });

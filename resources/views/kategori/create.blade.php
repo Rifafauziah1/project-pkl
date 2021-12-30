@@ -21,6 +21,15 @@
                    <form action="{{route('kategori.store')}}" method="post">
                         @csrf
                         <div class="form-group">
+                            <label for="">Masukan ID Kategori</label>
+                            <input type="number" name="id_kategori" class="form-control @error('id_kategori') is-invalid @enderror">
+                             @error('id_kategori')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <label for="">Masukan Kode Kategori</label>
                             <input type="number" name="kode_kategori" class="form-control @error('kode_kategori') is-invalid @enderror">
                              @error('kode_kategori')
