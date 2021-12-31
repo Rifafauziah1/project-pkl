@@ -15,15 +15,15 @@ class Buku extends Model
 
     public function kategori()
     {
-        return $this->belongsTo('App\Models\Kategori', 'nama_kategori');
+        return $this->belongsTo('App\Models\Kategori','id_kategori','nama_kategori');
     }
     public function pengarang()
     {
-        return $this->belongsTo('App\Models\Pengarang', 'nama_pengarang');
+        return $this->belongsTo('App\Models\Pengarang','id_pengarang','nama_pengarang');
     }
     public function penerbit()
     {
-        return $this->belongsTo('App\Models\Penerbit', 'nama_penerbit');
+        return $this->belongsTo('App\Models\Penerbit','id_penerbit','nama_penerbit');
     }
     public function image()
     {

@@ -4,6 +4,8 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PengarangController;
 use App\Http\Controllers\PenerbitController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\PembeliController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -84,5 +86,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('pengarang', PengarangController::class)->middleware(['role:admin']);
     Route::resource('penerbit', PenerbitController::class)->middleware(['role:admin']);
     Route::resource('buku', BukuController::class)->middleware(['role:admin']);
+    Route::resource('pembeli', PembeliController::class)->middleware(['role:admin']);
+    Route::resource('transaksi', TransaksiController::class)->middleware(['role:admin']);
 
 });

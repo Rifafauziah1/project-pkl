@@ -21,15 +21,6 @@
                    <form action="{{route('penerbit.store')}}" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="">Masukan ID</label>
-                            <input type="number" name="id_penerbit" class="form-control @error('id_penerbit') is-invalid @enderror">
-                             @error('id_penerbit')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <label for="">Masukan Nama Penerbit</label>
                             <input type="text" name="nama_penerbit" class="form-control @error('nama_penerbit') is-invalid @enderror">
                              @error('nama_penerbit')

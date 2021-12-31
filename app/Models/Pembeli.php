@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Pembeli extends Model
 {
     use HasFactory;
-    protected $table = "kategori";
+    protected $table = "pembeli";
     protected $fillable = ['nama_pembeli', 'alamat', 'no_hp', 'tgl_beli'];
     protected $visible = ['nama_pembeli', 'alamat', 'no_hp', 'tgl_beli'];
     public $timestamps = true;
 
     public function buku()
     {
-        return $this->hasMany('App\Models\Transaksi', 'nama_pembeli', 'alamat', 'tgl_beli');
+        return $this->hasMany('App\Models\Transaksi', 'nama_pembeli');
     }
 }

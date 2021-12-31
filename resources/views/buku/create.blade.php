@@ -4,13 +4,13 @@
 
 @section('content_header')
 
-    Dashboard
+    Halaman Buku
 
 @stop
 
 @section('content')
 
-    Halaman Buku
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -19,54 +19,7 @@
                     <div class="card-body">
                        <form action="{{route('buku.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group">
-                                <label for="">Masukan ID</label>
-                                <input type="text" name="id_buku" class="form-control @error('buku') is-invalid @enderror">
-                                 @error('buku')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="">Masukan ID Kategori</label>
-                                <select name="id_kategori" class="form-control @error('id_kategori') is-invalid @enderror">
-                                    @foreach($kategori as $data)
-                                    <option value="{{$data->id}}">{{$data->id_kategori}}</option>
-                                    @endforeach
-                                </select>
-                                @error('id_kategori')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                            <label for="">Masukan ID Pengarang</label>
-                            <select name="id_pengarang" class="form-control @error('id_pengarang') is-invalid @enderror">
-                                @foreach($pengarang as $data)
-                                <option value="{{$data->id}}">{{$data->id_pengarang}}</option>
-                                @endforeach
-                            </select>
-                            @error('id_pengarang')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="">Masukan ID Penerbit</label>
-                            <select name="id_penerbit" class="form-control @error('id_penerbit') is-invalid @enderror">
-                                @foreach($penerbit as $data)
-                                <option value="{{$data->id}}">{{$data->id_penerbit}}</option>
-                                @endforeach
-                            </select>
-                            @error('id_penerbit')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                            @enderror
-                        </div>
+                           
                         <div class="form-group">
                             <label for="">Masukan Judul Buku</label>
                             <input type="text" name="judul" class="form-control @error('judul') is-invalid @enderror">

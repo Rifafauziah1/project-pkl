@@ -25,7 +25,7 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr>
-                                    <th>ID</th>
+                                    <th>NO</th>
                                     <th>Nama Penerbit</th>
                                     <th>Alamat</th>
                                     <th>Email</th>
@@ -34,7 +34,7 @@
                                 @php $no=1; @endphp
                                 @foreach ($penerbit as $data)
                                     <tr>
-                                        <td>{{ $data->id_penerbit }}</td>
+                                        <td>{{ $no++ }}</td>
                                         <td>{{ $data->nama_penerbit }}</td>
                                         <td>{{ $data->alamat }}</td>
                                         <td>{{ $data->email }}</td>

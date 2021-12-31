@@ -25,10 +25,6 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tr>
-                                    <th>ID </th>
-                                    <th>ID Kategori</th>
-                                    <th>ID Pengarang</th>
-                                    <th>ID Penerbit</th>
                                     <th>Judul</th>
                                     <th>Nama Kategori</th>
                                     <th>Nama Pengarang</th>
@@ -42,10 +38,6 @@
                                 @php $no=1; @endphp
                                 @foreach ($buku as $data)
                                     <tr>
-                                        <td>{{$data->id_buku}}</td>
-                                        <td>{{$data->id_kategori}}</td>
-                                        <td>{{$data->id_pengarang}}</td>
-                                        <td>{{$data->id_penerbit}}</td>
                                         <td>{{$data->judul}}</td>
                                         <td>{{$data->nama_kategori }}</td>
                                         <td>{{$data->nama_pengarang}}</td>

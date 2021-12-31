@@ -15,14 +15,10 @@ class CreateBukuTable extends Migration
     {
         Schema::create('buku', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_buku');
             $table->bigInteger('id_kategori')->unsigned();
             $table->bigInteger('id_pengarang')->unsigned();
             $table->bigInteger('id_penerbit')->unsigned();
             $table->string('judul');
-            $table->string('nama_kategori');
-            $table->string('nama_pengarang');
-            $table->string('nama_penerbit');
             $table->string('deskripsi');
             $table->integer('stok');
             $table->integer('harga');

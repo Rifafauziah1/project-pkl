@@ -22,14 +22,12 @@ class PenerbitController extends Controller
     {
         //validasi data
         $validated = $request->validate([
-            'id_penerbit' => 'required',
             'nama_penerbit' => 'required',
             'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $penerbit = new Penerbit;
-        $penerbit->id_penerbit = $request->id_penerbit;
         $penerbit->nama_penerbit = $request->nama_penerbit;
         $penerbit->alamat = $request->alamat;
         $penerbit->email = $request->email;
@@ -52,14 +50,12 @@ class PenerbitController extends Controller
     {
         //
         $validated = $request->validate([
-            'id_penerbit' => 'required',
             'nama_penerbit' => 'required',
             'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $penerbit = Penerbit::findOrFail($id);
-        $pengarang->id_penerbit = $request->id_penerbit;
         $penerbit->nama_penerbit = $request->nama_penerbit;
         $penerbit->alamat = $request->alamat;
         $penerbit->email = $request->email;

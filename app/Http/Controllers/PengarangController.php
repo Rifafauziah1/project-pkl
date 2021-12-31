@@ -21,14 +21,12 @@ class PengarangController extends Controller
     {
         //validasi data
         $validated = $request->validate([
-            'id_pengarang' => 'required',
             'nama_pengarang' => 'required',
             'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $pengarang = new Pengarang;
-        $pengarang->id_pengarang = $request->id_pengarang;
         $pengarang->nama_pengarang = $request->nama_pengarang;
         $pengarang->alamat = $request->alamat;
         $pengarang->email = $request->email;
@@ -51,14 +49,12 @@ class PengarangController extends Controller
     {
         //
         $validated = $request->validate([
-            'id_pengarang' => 'required',
             'nama_pengarang' => 'required',
             'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $pengarang = Pengarang::findOrFail($id);
-        $pengarang->id_pengarang = $request->id_pengarang;
         $pengarang->nama_pengarang = $request->nama_pengarang;
         $pengarang->alamat = $request->alamat;
         $pengarang->email = $request->email;

@@ -43,15 +43,11 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        //validasi data
         $validated = $request->validate([
+            'judul'=>'required',
             'id_kategori'=>'required',
             'id_pengarang'=>'required',
             'id_penerbit'=>'required',
-            'judul'=>'required',
-            'nama_kategori'=>'required',
-            'nama_pengarang'=>'required',
-            'nama_penerbit'=>'required',
             'deskripsi'=>'required',
             'stok'=>'required',
             'harga'=>'required',
@@ -59,13 +55,10 @@ class BukuController extends Controller
     ]);
 
     $buku = new Buku;
-    $buku->id_kategori = $request->id_kategori;
+    $buku->judul = $request->judul;
+    $buku->id_kategpri = $request->id_kategori;
     $buku->id_pengarang = $request->id_pengarang;
     $buku->id_penerbit = $request->id_penerbit;
-    $buku->judul = $request->judul;
-    $buku->nama_kategori = $request->nama_kategori;
-    $buku->nama_pengarang = $request->nama_pengarang;
-    $buku->nama_penerbit = $request->nama_penerbit;
     $buku->deskripsi = $request->deskripsi;
     $buku->stok = $request->stok;
     $buku->harga = $request->harga;
@@ -120,10 +113,6 @@ class BukuController extends Controller
         //
          //validasi data
          $validated = $request->validate([
-            'id_buku' => 'required',
-            'id_kategori'=>'required',
-            'id_pengarang'=>'required',
-            'id_penerbit'=>'required',
             'judul'=>'required',
             'nama_kategori'=>'required',
             'nama_pengarang'=>'required',
@@ -135,10 +124,6 @@ class BukuController extends Controller
             ]);
 
     $buku = Buku::findOrFail($id);
-    $buku->id_buku = $request->id_buku;
-    $buku->id_kategori = $request->id_kategori;
-    $buku->id_pengarang = $request->id_pengarang;
-    $buku->id_penerbit = $request->id_penerbit;
     $buku->judul = $request->judul;
     $buku->nama_kategori = $request->nama_kategori;
     $buku->nama_pengarang = $request->nama_pengarang;

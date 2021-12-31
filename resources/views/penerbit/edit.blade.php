@@ -22,14 +22,6 @@
                             @csrf
                             @method('put')
                             <div class="form-group">
-                                <label for="">Masukan ID</label>
-                                <input type="number" name="id_penerbit" value="{{$pengarang->id_penerbit}}" class="form-control @error('nama_kategori') is-invalid @enderror">
-                                @error('id_penerbit')
-                                    <span class="invalid-feedback" role="alert"></span>
-                                    <strong>{{ $message }}</strong>
-                                @enderror
-                            </div>
-                            <div class="form-group">
                                 <label for="">Masukan Nama Penerbit</label>
                                 <input type="text" name="nama_penerbit" value="{{$penerbit->nama_penerbit}}" class="form-control @error('nama_kategori') is-invalid @enderror">
                                 @error('nama_penerbit')

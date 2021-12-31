@@ -1,3 +1,4 @@
+
 @extends('adminlte::page')
 @section('header')
 <div class="content-header">
@@ -12,18 +13,19 @@
 @endsection
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Data Pengarang</div>
+                <div class="card-header">Data Pembeli</div>
                 <div class="card-body">
-                   <form action="{{route('pengarang.store')}}" method="post">
+                   <form action="{{route('pembeli.store')}}" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="">Masukan Nama Pengarang</label>
-                            <input type="text" name="nama_pengarang" class="form-control @error('nama_pengarang') is-invalid @enderror">
-                             @error('nama_pengarang')
+                            <label for="">Masukan Nama Pembeli</label>
+                            <input type="text" name="nama_pembeli" class="form-control @error('nama_pembeli') is-invalid @enderror">
+                             @error('nama_pembeli')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -38,10 +40,19 @@
                                 </span>
                             @enderror
                         </div>
+                    <div class="form-group">
+                                <label for="">Masukan Tanggal Beli</label>
+                            <input type="date" name="tgl_beli" class="form-control @error('tgl_beli') is-invalid @enderror">
+                             @error('tgl_beli')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                         <div class="form-group">
-                            <label for="">Masukan Email</label>
-                            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror">
-                             @error('email')
+                            <label for="">Masukan Nomor Handphone</label>
+                            <input type="number" name="no_hp" class="form-control @error('no_hp') is-invalid @enderror">
+                             @error('no_hp')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -58,4 +69,5 @@
         </div>
     </div>
 </div>
+
 @endsection
